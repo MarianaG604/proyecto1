@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> <!--siempre agregarlo manualmente-->
+	<title></title>
+</head>
+<body>
+	<form method="POST" action="enviar.php"> <!--para formularios, siempre deben decir post. Existe GET y POST. Post=invisible hacia el servidor.GET a traves de URL. Action: archivo en el servidor que lo ejecuta-->
+		<label for="nombre">Nombre:</label><!--el identificador de las etiquetas. puede no estar. este debe estar relacionado con su formulario a traves del id-->
+		<input type="text" id="nombre" placeholder="Escribì tu nombre" required> <!--para completar por el usuario. Type= que tipo de info esperamos del usuario (texto, numero). ID unico por pagina. Placeholder es lo que desaparece cuando escribimos (ya previamente completado). Required es para que se haga obligatorio-->
+		<br>
+		<label for="correo">Email:</label>
+		<input type="email" name="correo" placeholder="Ingresa tu correo" required></input> <!--para usabilidad se usa el type, para mobile es importante-->
+		<br>
+		<label for="edad">Edad:</label>
+		<input type="number" name="edad" placeholder="Ingresa tu edad">
+		<br>
+		<label for="fecha">Fecha de nacimiento:</label>
+		<input type="date" name="fecha" placeholder="Ingresa tu fecha de nacimiento">
+		<br>
+		<label for="provincia">Ingrese provincia:</label>
+		<br>
+		<select name="provincia"> 
+		<br>
+			<option value="BA">Buenos Aires</option>
+			<option value="ER">Entre Rios</option>
+			<option value="SF">Santa Fe</option>
+		</select>	
+		<br>
+		<label>Acepta los terminos y condiciones?</label>
+		<br>
+		<input type="checkbox" name="tyc" required=""> Acepto
+		<br>
+		<label>Desea enviar esto?</label>
+		<br>
+		<input type="radio" name="enviar" checked> Enviar
+		<br>
+		<input type="radio" name="enviar"> Retirar
+		<br>
+		<label for="comentarios">Ingrese su comentario aqui</label>
+		<br>
+		<textarea name="comentarios" form="usrform" placeholder="Ingrese su comentario aqui"></textarea>
+		<br>
+		<input type="submit" name="enviar" value="Enviar">
+ 
+	</form>
+
+</body>
+</html>
